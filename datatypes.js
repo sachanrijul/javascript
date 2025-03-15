@@ -5,8 +5,8 @@ let name = "sachanrijul"
 var age = 18 // this is not used very much now for block scope problems.
 game = "cricket" // do not use this , this is not a good practice.
 
-// console.log(id)
-// console.table([id, name, age, game ]) 
+console.log(id)
+console.table([id, name, age, game ]) 
 
 // ----------------------------------------------------------------------
 
@@ -43,14 +43,14 @@ let e = undefined //(or we only declare it not assign anything thats also consid
 let f = true
 let g = Symbol("something") // immutable
 
-// console.table([a, b, c, d, e, f, g])
-// console.log(typeof a) // number 
-// console.log(typeof b) // string
-// console.log(typeof c) // bigint
-// console.log(typeof d) // object
-// console.log(typeof e) // undefined
-// console.log(typeof f) // boolean
-// console.log(typeof g) // symbol (it is used of making anything unique )
+console.table([a, b, c, d, e, f, g])
+console.log(typeof a) // number 
+console.log(typeof b) // string
+console.log(typeof c) // bigint
+console.log(typeof d) // object
+console.log(typeof e) // undefined
+console.log(typeof f) // boolean
+console.log(typeof g) // symbol (it is used of making anything unique )
 
 
 let arr = [" 10 ", " hello ", " null ", " undefined "," true "]
@@ -68,6 +68,10 @@ let func = function(){
 console.log(arr)
 console.log(obj)
 func()
+
+console.log(typeof arr) // object
+console.log(typeof obj) // object
+console.log(typeof func) // function
 // ----------------------------------------------------------------------------
 
 
