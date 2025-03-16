@@ -130,12 +130,21 @@ console.log(n.replace("goslin","renolds")) //ryan renolds
 // it returns -1 if no match is found and it is also case sensitive.
 
 // 20.  slice()  {extracts a part of a string and returns a new string}
+let o = "This string is going to be sliced"
+console.log(o.slice(0,4)) // This
 
 // 21. split()  {splits a string into an array of substrings}
+let p = "split it into substrings"
+console.log(p.split(" ")) // [ 'split', 'it', 'into', 'substrings' ]
 
 // 22. startsWith()  {checks whether a string begins with specified characters}
+let q = "This string starts with."
+console.log(q.startsWith("This")) // true
+console.log(q.startsWith("This",0)) // true (because This is started from index 0)
 
 // 23. substring()  {extracts characters from a string, between two specified indices}
+let r = "sub string"
+console.log(r.substring(0,6)) // sub st (starts from first index and ends just before the last index)
 
 // 24. toLocaleLowerCase()  {returns a string converted to lowercase letters, using the host's locale}
 
@@ -154,3 +163,4 @@ console.log(n.replace("goslin","renolds")) //ryan renolds
 // 31. trimStart()  {returns a string with removed whitespaces from the start}
 
 // 32. valueOf()  {returns the primitive nalue of a string or a string object}
+// it brings back the string to primitive type from object string.
