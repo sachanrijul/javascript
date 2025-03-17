@@ -1,7 +1,10 @@
 let a = 32.54  // a number with decimals 
 let b = 34  // a number without decimals 
 let c = 32e6  // large number declared with exponent notation
-let d = 444444444444444  // integers are accurate up to 15 digits
+let d = 444444444444444   // integers are accurate up to 15 digits
+let hex = 0x345 // hexadecimal is assigned like this
+let bin = 0b101010  // binary is assigned like this
+let oct = 0o456  // octal is assigned like this
 // js numbers are always 64-bit floating point 
 // 52 bits(0 - 51){value(aka fraction/mantissa)} , 11 bits(52 - 62){exponent} , 1 bit(63){sign}
 // The maximum number of decimals is 17.
@@ -61,7 +64,7 @@ console.log( 10 / -0 ) // -Infinity
 console.log(typeof Infinity) // number
 
 // Hexadecimal : (js interprets numberic constants as hexadecimal if they are preceeded by 0x.)
-// To be in the safe side `do not write a number with a leading zero (like 04)`. may be it will interpreted like octal number.
+// To be in the safe side `do not write a number with a leading zero (like 04)`. It will interpreted like octal number.
 
 // Js by default displays numbers as base 10 decimals. But you can use the toString() method to output numbers from base 2 to base 36.
 // Hexadecimal is base 16. Decimal is base 10. Octal is base 8. Binary is base 2.
