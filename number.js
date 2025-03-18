@@ -171,6 +171,9 @@ console.log(Number.isInteger(23.34))  // false
 // min(x,y,z) -->  returns the number with the lowest value
 // pow(x,y) -->  returns the value of x to the power of y
 // random() -->  returns a random number between 0 and 1
+let aa = 10
+let bb = 20
+console.log(Math.floor(Math.random() * (bb - aa + 1) + aa))
 // round(x) -->  rounds x to the nearest integer
 // sign(x) -->  returns if x is negative, null or positive (-1,0,1)
 // sin(x) -->  returns the sine of x in radians
