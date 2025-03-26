@@ -13,6 +13,9 @@ b.salary = 100.99;
 b.isLoggedIn = false;
 b.nickNames = ["batman", "spiderman","me"]
 
+// using delete keyword to delete any property ..
+delete b.age; // we can also use b["age"].
+
 // same thing we can do for a object.
 
 const mysym = Symbol("key1") // here we are declaring this because we are going to use it in c object.
@@ -54,8 +57,12 @@ console.log(c.email); // rijul@google.com
 c.greeting = function(){
     console.log("greeting function is called ");
 }
-console.log(c.greeting); // [Function (anonymous)]
-console.log(c.greeting());  // greeting function is called 
+console.log(c.greeting); // [Function (anonymous)]  {It will return the function definition}
+console.log(c.greeting());  // greeting function is called  {It will execute the function }
+
+// c.name = funtion () {
+//     return (this.name).toUpperCase();
+// }
 
 // using this keyword ...
 c.greeting1 = function(){
