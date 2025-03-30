@@ -71,3 +71,15 @@ function j(){
 const k = function(){
     return "I am function which is called before the declaration of function."
 }
+
+// scope -------------------------------------
+
+if (true) {
+    let l = 34
+    const m = 45
+    var n = 65
+}
+
+// console.log(l)  // it will give error 
+// console.log(m)  // it will also give error
+// console.log(n)  // 65  (scope problem)
