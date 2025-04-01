@@ -60,6 +60,12 @@ if (num === 0) {  // defining conditional function.
 }
 i()  // I am conditional function definition.
 
+// anonymous function (but we only call it by iife because it has no name so how we gonna call it.) ...
+(function () {
+    console.log("I am anonymous function !!")
+})();
+
+
 // here we can call the function before the declaration of the function.
 console.log(j())
 function j(){
@@ -94,3 +100,6 @@ If we declare any variable(let, const, var) inside the block then they are in lo
 If we declare any variable(let, const, var) inside any function then they are in function scope.
 If we assign any variable anywhere without declaration then it is automatically in global scope. Only in strict mode they are not in global scope.
 */
+
+// This keyword -------------------------------------------------------------------------------------------------------------------------
+
