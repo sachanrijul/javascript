@@ -83,3 +83,14 @@ if (true) {
 // console.log(l)  // it will give error 
 // console.log(m)  // it will also give error
 // console.log(n)  // 65  (scope problem)
+
+/* we have three types of scope:
+-> Global scope 
+-> local/module scope
+-> function scope
+
+If we declare any variable(let, const, var) outside then they are in global scope.
+If we declare any variable(let, const, var) inside the block then they are in local scope except var.
+If we declare any variable(let, const, var) inside any function then they are in function scope.
+If we assign any variable anywhere without declaration then it is automatically in global scope. Only in strict mode they are not in global scope.
+*/
