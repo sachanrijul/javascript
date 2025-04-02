@@ -61,9 +61,9 @@ if (num === 0) {  // defining conditional function.
 i()  // I am conditional function definition.
 
 // anonymous function (but we only call it by iife because it has no name so how we gonna call it.) ...
-(function () {
-    console.log("I am anonymous function !!")
-})();
+// (function () {
+//     console.log("I am anonymous function !!")
+// })();
 
 
 // here we can call the function before the declaration of the function.
@@ -103,3 +103,42 @@ If we assign any variable anywhere without declaration then it is automatically 
 
 // This keyword -------------------------------------------------------------------------------------------------------------------------
 
+// This keyword refers to an object. Alone, tis refers to the global object. In strict mode this is undefined.
+
+console.log(this)  //  {}    it gives an empty object.
+
+const o = {
+    firstName : "Rijul",
+    lastName : "Sachan",
+    id : 1234,
+    myFunction : function() {
+        return this;
+    }
+}
+
+console.log(o.myFunction());  // {firstName: 'Rijul', lastName: 'Sachan', id: 1234, myFunction: [Function: myFunction] }
+
+const p = {
+    fullName : function(){
+        return this.firstName + " "+ this.lastName;
+    }
+}
+const q = {
+    firstName : "Rijul",
+    lastName  : "Sachan"
+}
+
+// the call() methods are predefined in js. they both be used to call an object method with another object as argument.
+p.fullName.call(q);  // Rijul Sachan
+
+// the bind() method, an object can borrow a method from another object.
+let r = p.fullName.bind(q)
+console.log(r());  // Rijul Sachan
+
+// precedence of this keyword..----------
+/*
+1. bind()
+2. apply() and call()
+3. Object method
+4. Global scope
+*/ 
