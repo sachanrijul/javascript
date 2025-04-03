@@ -33,3 +33,18 @@ console.log(f(100));  //  Value of e is : 100
     console.log("I am anonymous arrow function !!")
 })();  // I am anonymous arrow function !! (but here we are using iife because if any function have no name so how we gonna call it.)
 
+// standard IIFE
+(function () {
+    // statements…
+  })();
+  
+  // arrow function variant
+  (() => {
+    // statements…
+  })();
+  
+  // async IIFE
+  (async () => {
+    // statements…
+  })();
+  
