@@ -74,4 +74,58 @@ do {
 // for/in --> loops through the properties of an object.
 // for/of --> loops through the dvalues of an iterable object.
 // while --> loops through a block of code while a specified condition is true.
-// do/while --> also loops through
+// do/while --> also loops through a block of code while a specified condition is true.
+
+// for loop --------------------------------------------------------
+// for (expression 1; expression 2; expression 3) {
+//     // code block to be executed
+//   }
+// 1: is executed before the execution of the code block.
+// 2: defines the condition for executing the code block. 
+// 3: is executed after the code block has been executed .
+
+// **** Do not use var in loops **** 
+
+// for in loop --------------------------------------------------------
+// for (key in object) {
+//   // code block to be executed
+// }
+
+// for (variable in array) {
+//     code
+//   }
+
+// Array.forEach() --------------------------------------------------------
+// it takes 3 arguments : item value, item index, array itself.
+
+// const numbers = [45, 4, 9, 16, 25];
+
+// let txt = "";
+// numbers.forEach(myFunction);
+
+// function myFunction(value, index, array) {
+//   txt += value;
+// }
+
+// for of loop ----------------------------------------------------------------------
+
+// for (variable of iterable) {
+//     // code block to be executed
+//   }
+// for every iteration the value of the next property is assigned to the variable. variable can be declared with const, let or var .
+
+// while loop and do while loop ---------------------------------------------------------------
+
+// while (condition) {
+//     // code block to be executed
+//   }
+
+// do {
+//     // code block to be executed
+//   }
+//   while (condition);
+
+// break and continue ---------------------------------------------------------
+// break statement jumps out of the loop .
+// continue statement jumps over one iteration in the loop .
+// ** with a label reference, the break statement can be used to jump out of any code. **
