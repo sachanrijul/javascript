@@ -124,3 +124,43 @@ console.log(val1);
 
 const iceTeaPrice = 100
 iceTeaPrice <= 80 ? console.log("less than 80") : console.log("more than 80")
+
+
+// if ----------------------------------------------------------------------
+if (condition) {
+    //  block of code to be executed if the condition is true
+  }
+
+// if else ---------------------------------------------------------------------
+if (condition) {
+    //  block of code to be executed if the condition is true
+  } else {
+    //  block of code to be executed if the condition is false
+  }
+
+// if else if -------------------------------------------------------------------
+if (condition1) {
+    //  block of code to be executed if condition1 is true
+  } else if (condition2) {
+    //  block of code to be executed if the condition1 is false and condition2 is true
+  } else {
+    //  block of code to be executed if the condition1 is false and condition2 is false
+  }
+
+// switch statement ------------------------------------------------------------------
+switch(expression) {
+    case x:
+      // code block
+      break;
+    case y:
+      // code block
+      break;
+    default:
+      // code block
+  }
+
+// control flow keywords --------------------------------------------------------------
+
+// break -->  it breaks out of the switch block.
+// default --> it specifies the code to run if there is no case match.
+// common code blocks --> you can also use multiple case for same code.ii
