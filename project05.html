@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rijul Sachan</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    // generate random color 
+    const randomColor = function(){
+        const hex = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += hex[Math.floor(Math.random()*16)];
+        }
+        return color;
+    }    
+    let stopp;
+    const changeBgColor = function () {
+        stopp = setInterval(() => {
+            document.body.style.backgroundColor = randomColor()
+        }, 500);
+    }
+    document.querySelector('#start').addEventListener('click', ()=>{
+        changeBgColor()
+    })
+    document.querySelector('#stop').addEventListener('click', ()=>{
+        clearInterval(stopp);
+        stopp = null;
+    })
+</script>
+</html>
