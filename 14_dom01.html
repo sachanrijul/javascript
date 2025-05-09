@@ -28,4 +28,121 @@
         </ul>
     </div>
 </body>
+<script>
+    // methods to find HTML elements
+    console.log(document.getElementById('title')) // gives full h1 tag
+    console.log(document.getElementsByTagName('input')) // gives HTMLCollection of input element
+    console.log(document.getElementsByName('DOM Learing')) // gives NodeList of title
+    console.log(document.getElementsByClassName('list-item')) // gives HTMLCollection of all elements of class list-items
+    //console.log(document.getElementsByTagNameNS(namespace, tagName))
+    // This is advanced and rarely used it works with XML/MathML/SVG documents not regular HTML
+    console.log(document.querySelector('.heading')) // gives full h1 tag
+    console.log(document.querySelectorAll('ul')) // gives a NodeList of unorderd list 
+
+    // changing HTML elements 
+    let element = document.querySelector('.list-item')
+    console.log(element);
+    //change content ............
+    element.innerHTML = 'changed html content'
+    element.innerText = 'changed html content 02'
+    element.textContent = 'changed html content 03'
+    // change style (CSS) ..................
+    element.style.backgroundColor = '#000'
+    // change Attributes ..................
+    element.setAttribute('id', "first-item")
+    let firstElementId = element.getAttribute('id')
+    // change Classes .................
+    element.className = "new-class"
+    element.classList.add('class')
+    element.classList.remove('class')
+    element.classList.toggle('dark-mode')
+    // Add or Remove Elements ...........
+    // let p = document.createElement("p");
+    // p.innerText = "New paragraph";
+    // document.body.appendChild(p);
+    // p.remove()
+    // let parent = document.getElementById("list");
+    // let child = document.getElementById("item");
+    // parent.removeChild(child);
+    // change input values
+    element.value = "NewUser123"
+
+    // adding events handlers...... (but recommened to use addEventListener.)
+    element.onclick = function(){alert(`${element.tagName} is clicked`)}
+
+      // Returns a list of <a name="..."> elements (Deprecated)
+      console.log(document.anchors);
+
+      // Returns a list of <applet> elements (Deprecated)
+      console.log(document.applets);
+
+      // Returns the absolute base URI of the document
+      console.log(document.baseURI);
+
+      // Returns the <body> element
+      console.log(document.body);
+
+      // Returns the document's cookies as a string
+      console.log(document.cookie);
+
+      // Returns the document's <!DOCTYPE>
+      console.log(document.doctype);
+
+      // Returns the <html> element
+      console.log(document.documentElement);
+
+      // Returns the document mode (only in IE, Deprecated)
+      console.log(document.documentMode);
+
+      // Returns the URI of the document
+      console.log(document.documentURI);
+
+      // Returns the domain of the document (Deprecated for security)
+      console.log(document.domain);
+
+      // Returns the DOM configuration (Deprecated)
+      console.log(document.domConfig);
+
+      // Returns a list of <embed> elements
+      console.log(document.embeds);
+
+      // Returns all <form> elements
+      console.log(document.forms);
+
+      // Returns the <head> element
+      console.log(document.head);
+
+      // Returns all <img> elements
+      console.log(document.images);
+
+      // Returns the DOM implementation object
+      console.log(document.implementation);
+
+      // Returns character encoding of the document (like UTF-8)
+      console.log(document.inputEncoding);
+
+      // Returns the last modified time of the document
+      console.log(document.lastModified);
+
+      // Returns all <a> and <area> elements with href
+      console.log(document.links);
+
+      // Returns the document loading status: "loading", "interactive", or "complete"
+      console.log(document.readyState);
+
+      // Returns the referring page's URL (where the user came from)
+      console.log(document.referrer);
+
+      // Returns all <script> elements
+      console.log(document.scripts);
+
+      // Returns whether strict error checking is enabled (rarely used)
+      console.log(document.strictErrorChecking);
+
+      // Returns the content of the <title> element
+      console.log(document.title);
+
+      // Returns the full URL of the current page
+      console.log(document.URL);
+</script>
 </html>
