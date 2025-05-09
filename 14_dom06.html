@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM CSS and Animation</title>
+  <style>
+    /* Initial style for the CSS demo div */
+    #styleDiv {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      margin-bottom: 20px;
+    }
+
+    /* Initial style for the animation demo div */
+    #animateDiv {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>1. Change CSS with JavaScript</h2>
+  <div id="styleDiv">This is a div element.</div>
+  <button onclick="changeStyle()">Change Style</button>
+
+  <hr>
+
+  <h2>2. Animate Element with JavaScript</h2>
+  <div id="animateDiv"></div>
+  <button onclick="startAnimation()">Start Animation</button>
+
+  <script>
+    // Function to change the CSS of an element
+    function changeStyle() {
+      var element = document.getElementById("styleDiv");
+      element.style.backgroundColor = "lightgreen"; // Change background color
+      element.style.width = "300px"; // Change width
+      element.style.height = "150px"; // Change height
+    }
+
+    // Function to animate an element by moving it to the right
+    function startAnimation() {
+      var elem = document.getElementById("animateDiv");
+      var pos = 0;
+      var id = setInterval(frame, 10); // Repeat every 10 ms
+
+      function frame() {
+        if (pos >= 350) {
+          clearInterval(id); // Stop the animation at 350px
+        } else {
+          pos++; // Increase position
+          elem.style.left = pos + "px"; // Move element to the right
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
