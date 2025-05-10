@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Navigation, Nodes, Collections & NodeList</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    section { border: 1px solid #ccc; margin-bottom: 20px; padding: 15px; }
+    h2 { margin-top: 0; }
+  </style>
+</head>
+<body>
+
+  <!-- DOM NAVIGATION EXAMPLES -->
+  <section>
+    <h2>1. DOM Navigation</h2>
+    <div id="navDiv">
+      <p>First paragraph</p>
+      <p>Second paragraph</p>
+    </div>
+    <script>
+      const navDiv = document.getElementById("navDiv");
+      console.log(navDiv.parentNode); // Gets the parent of #navDiv, usually <body>
+      console.log(navDiv.childNodes); // Lists all child nodes including text nodes (whitespace)
+      console.log(navDiv.children);   // Lists only element children like <p>
+      console.log(navDiv.firstChild); // First child node (can be text node)
+      console.log(navDiv.firstElementChild); // First element node (e.g., first <p>)
+      console.log(navDiv.lastElementChild); // Last element node (e.g., second <p>)
+      console.log(navDiv.nextElementSibling); // Returns next sibling element (null if none)
+      console.log(navDiv.previousElementSibling); // Returns previous sibling element (null if none)
+    </script>
+  </section>
+
+  <!-- DOM NODES EXAMPLES -->
+  <section>
+    <h2>2. DOM Nodes</h2>
+    <p id="nodePara">This is a text <b>with bold</b> part.</p>
+    <script>
+      const nodePara = document.getElementById("nodePara");
+      console.log(nodePara.nodeName); // "P" - Tag name of the node
+      console.log(nodePara.nodeType); // 1 - Indicates it's an Element node
+      console.log(nodePara.childNodes[0].nodeValue); // Gets text content from the first child (text node)
+    </script>
+  </section>
+
+  <!-- DOM COLLECTIONS EXAMPLES -->
+  <section>
+    <h2>3. DOM Collections</h2>
+    <form id="myForm">
+      <input type="text" name="username">
+      <input type="submit">
+    </form>
+    <img src="#" alt="Image 1">
+    <img src="#" alt="Image 2">
+    <script>
+      console.log(document.forms); // Live HTMLCollection of all <form> elements
+      console.log(document.images); // Live HTMLCollection of all <img> elements
+      console.log(document.forms[0].elements); // Form controls inside the first form
+    </script>
+  </section>
+
+  <!-- DOM NODELIST EXAMPLES -->
+  <section>
+    <h2>4. DOM NodeList</h2>
+    <ul id="myList">
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ul>
+    <script>
+      const items = document.querySelectorAll("#myList li"); // Static NodeList of all <li> elements
+      console.log(items); // Logs the NodeList
+      items.forEach(item => console.log(item.textContent)); // Prints the text of each list item
+    </script>
+  </section>
+
+  <!--
+    ======================== EXPLANATION ========================
+
+    1. DOM Navigation:
+    - Helps us move through the structure of the HTML document like a tree.
+    - .parentNode returns the parent node of an element.
+    - .childNodes returns all child nodes (including text, comment, etc.).
+    - .children returns only child element nodes (like <p>, <div>, etc.).
+    - .firstChild and .lastChild return the first/last child nodes (could be a text node).
+    - .firstElementChild and .lastElementChild return only element nodes.
+    - .nextElementSibling and .previousElementSibling help move sideways in the DOM tree.
+
+    2. DOM Nodes:
+    - Every part of an HTML document is a node: element nodes, text nodes, etc.
+    - .nodeType tells what kind of node it is:
+        1 = Element, 3 = Text, 8 = Comment
+    - .nodeName tells the tag name for elements (like "DIV", "P").
+    - .nodeValue gives the content for text or comment nodes.
+
+    3. DOM Collections:
+    - HTMLCollection is an array-like live list of elements.
+    - Examples: document.forms, document.images, document.links.
+    - These update automatically if the DOM changes.
+    - You can access items with indexing or loop using for loop (not forEach directly).
+
+    4. DOM NodeList:
+    - NodeList is another collection, often returned by querySelectorAll().
+    - Can be static (won’t update) or live depending on method.
+    - Can be looped using forEach or for loop.
+    - Good for selecting multiple elements with CSS-style selectors.
+  -->
+
+</body>
+</html>

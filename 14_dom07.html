@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All DOM Events & Event Listeners</title>
+  <style>
+    body {background-color: #212121;color: #fff; font-family: Arial; padding: 20px; }
+    section { margin-bottom: 30px; border-bottom: 1px solid #ccc; padding-bottom: 20px; }
+    button, input, div { margin-top: 10px; padding: 8px 12px; }
+  </style>
+</head>
+<body>
+
+  <!-- CLICK EVENTS -->
+  <section>
+    <h2>1. Click Events</h2>
+    <button id="clickBtn">Click Me</button>
+    <script>
+      document.getElementById("clickBtn").addEventListener("click", function() {
+        alert("Button clicked!");
+      });
+    </script>
+  </section>
+
+  <!-- MOUSE EVENTS -->
+  <section>
+    <h2>2. Mouse Events</h2>
+    <div id="hoverDiv" style="background:#e0e0e0; width:200px; height:50px;">Hover over me</div>
+    <script>
+      const hoverDiv = document.getElementById("hoverDiv");
+      hoverDiv.addEventListener("mouseover", () => hoverDiv.style.background = "#c0ffc0");
+      hoverDiv.addEventListener("mouseout", () => hoverDiv.style.background = "#e0e0e0");
+      hoverDiv.addEventListener("mousedown", () => console.log("Mouse down"));
+      hoverDiv.addEventListener("mouseup", () => console.log("Mouse up"));
+    </script>
+  </section>
+
+  <!-- KEYBOARD EVENTS -->
+  <section>
+    <h2>3. Keyboard Events</h2>
+    <input id="keyInput" placeholder="Type here..." />
+    <script>
+      const input = document.getElementById("keyInput");
+      input.addEventListener("keydown", e => alert("Key down:"));
+      input.addEventListener("keyup", e => alert("Key up:"));
+    </script>
+  </section>
+
+  <!-- FORM EVENTS -->
+  <section>
+    <h2>4. Form Events</h2>
+    <form id="myForm">
+      <input type="text" placeholder="Name" required />
+      <input type="submit" value="Submit" />
+    </form>
+    <script>
+      const form = document.getElementById("myForm");
+      form.addEventListener("submit", e => {
+        e.preventDefault(); // Prevent actual form submission
+        alert("Form submitted!");
+      });
+    </script>
+  </section>
+
+  <!-- FOCUS EVENTS -->
+  <section>
+    <h2>5. Focus Events</h2>
+    <input id="focusInput" placeholder="Focus/Blur me" />
+    <script>
+      const focusInput = document.getElementById("focusInput");
+      focusInput.addEventListener("focus", () => focusInput.style.background = "#fff3cd");
+      focusInput.addEventListener("blur", () => focusInput.style.background = "");
+    </script>
+  </section>
+
+  <!-- WINDOW EVENTS -->
+  <section>
+    <h2>6. Window Events</h2>
+    <p>Resize or scroll the page to trigger events.</p>
+    <script>
+      window.addEventListener("resize", () => console.log("Window resized"));
+      window.addEventListener("scroll", () => console.log("Page scrolled"));
+    </script>
+  </section>
+
+  <!-- CLIPBOARD EVENTS -->
+  <section>
+    <h2>7. Clipboard Events</h2>
+    <input id="copyInput" value="Try copying me" />
+    <script>
+      const copyInput = document.getElementById("copyInput");
+      copyInput.addEventListener("copy", () => alert("Copied!"));
+      copyInput.addEventListener("paste", () => alert("Pasted!"));
+    </script>
+  </section>
+
+  <!-- CHANGE EVENT -->
+  <section>
+    <h2>8. Change Event</h2>
+    <select id="dropdown">
+      <option value="apple">Apple</option>
+      <option value="banana">Banana</option>
+    </select>
+    <script>
+      document.getElementById("dropdown").addEventListener("change", function() {
+        alert("Selected: " + this.value);
+      });
+    </script>
+  </section>
+
+  <!-- LOAD & UNLOAD EVENTS -->
+  <section>
+    <h2>9. Load and Unload Events</h2>
+    <script>
+      window.addEventListener("load", () => console.log("Page fully loaded"));
+      window.addEventListener("beforeunload", () => {
+        // Triggered before the user leaves the page
+        return null; // Browser may show a prompt
+      });
+    </script>
+  </section>
+
+  <!-- CUSTOM EVENTS -->
+  <section>
+    <h2>10. Custom Events</h2>
+    <button id="triggerCustom">Trigger Custom Event</button>
+    <script>
+      const customBtn = document.getElementById("triggerCustom");
+      customBtn.addEventListener("myCustom", () => alert("Custom event triggered!"));
+
+      customBtn.addEventListener("click", () => {
+        const event = new Event("myCustom");
+        customBtn.dispatchEvent(event);
+      });
+    </script>
+  </section>
+
+</body>
+</html>
