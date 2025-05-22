@@ -1,7 +1,3 @@
-// ================================
-// JavaScript Events - Notes with Examples
-// ================================
-
 // 1. Mouse Events
 // These events are triggered by mouse actions.
 
